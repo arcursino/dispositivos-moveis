@@ -5,6 +5,9 @@ import 'package:literall/pages/livros.dart';
 import 'package:literall/pages/locais.dart';
 import 'package:literall/pages/login.dart';
 
+import 'package:hexcolor/hexcolor.dart';
+import 'package:literall/pages/perfil.dart';
+
 class NavDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -15,9 +18,9 @@ class NavDrawer extends StatelessWidget {
           DrawerHeader(
             child: Text(
               'LiterAll',
-              style: TextStyle(color: Colors.white, fontSize: 25),
+              style: TextStyle(color: Hexcolor('#5E2129'), fontSize: 25),
             ),
-            decoration: BoxDecoration(color: Colors.green),
+            decoration: BoxDecoration(color: Hexcolor('#F6E2E2')),
           ),
           ListTile(
             leading: Icon(Icons.home),
@@ -60,9 +63,14 @@ class NavDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.person_rounded),
+            leading: Icon(Icons.person),
             title: Text('Perfil'),
-            onTap: () => {},
+            onTap: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PerfilPage()),
+              )
+            },
           ),
           ListTile(
               leading: Icon(Icons.exit_to_app),

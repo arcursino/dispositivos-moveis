@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:literall/widgets/sidemenu.dart';
 
-class EventosPage extends StatelessWidget {
+class PerfilPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
