@@ -3,15 +3,15 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class LoginApi{
-  static Future<bool> login(String user, String password) async{
+  static Future<bool> login(String email, String password) async{
 
 
-var url = 'https://literall.herokuapp.com/api/usuario';
+var url = 'https://literall.herokuapp.com/api/login';
 
 var header = {"content-type": "application/json"};
 
 Map params = {
-  "email" : user,
+  "email" : email,
   "senha" : password
 };
 
