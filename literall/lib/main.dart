@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:literall/pages/eventos.dart';
-import 'package:literall/widgets/sidemenu.dart';
 
-import 'pages/home.dart';
+import 'pages/login.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,23 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: EventosPage(),
+      home: LoginPage(),
     );
   }
 }
-
-class TesteHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      drawer: NavDrawer(),
-      appBar: AppBar(
-        title: Text('Side menu'),
-      ),
-      body: Center(
-        child: Text('Side Menu Tutorial'),
-      ),
-    );
-  }
-}
-

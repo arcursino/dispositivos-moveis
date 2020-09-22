@@ -6,17 +6,36 @@ class EventosPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: NavDrawer(),
-      appBar: AppBar(
-        title: Text('Eventos'),
-      ),
-      body: Center(
-          child: Text('You have pressed the button')
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Increment Counter',
-        child: const Icon(Icons.add),
-      ),
+      body: FormularioEventos(),
     );
+  }
+}
+
+class FormularioEventos extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('Eventos por cidade'),
+        ),
+        body: Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: TextField(
+                style: TextStyle(
+                  fontSize: 24
+                ),
+                decoration: InputDecoration(
+                  labelText: 'Cidade',
+                  hintText: 'São José dos Campos'
+                ),
+              ),
+            ),
+            RaisedButton(
+              child: Text('Buscar')
+            )
+          ],
+        ));
   }
 }
