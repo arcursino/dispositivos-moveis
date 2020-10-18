@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:literall/services/conta_api.dart';
-import 'package:literall/services/login_api.dart';
 
-import 'home.dart';
 
 class CriarConta extends StatelessWidget {
   final _ctrlEmail = TextEditingController();
@@ -176,7 +174,7 @@ class CriarConta extends StatelessWidget {
 
     print("email: $email nome: $nome senha: $senha telefone: $telefone");
 
-    var response = await ContaApi.login(email, nome, senha, telefone);
+    var response = await ContaApi.conta(email, nome, senha, telefone);
 
     if(response) {
       _navegaLogin(context);
