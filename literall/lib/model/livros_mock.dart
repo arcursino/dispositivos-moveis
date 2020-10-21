@@ -3,15 +3,11 @@ import 'package:flutter/material.dart';
 
 class Usuario {
   String nome;
-  String dataDeAtualizacao;
-  String dataDeCriacao;
   String email;
   String telefone;
 
   Usuario({
     @required this.nome,
-    @required this.dataDeAtualizacao,
-    @required this.dataDeCriacao,
     @required this.email,
     @required this.telefone,
   });
@@ -29,13 +25,7 @@ class Livros {
   final String idioma;
   final String isbn;
   final String status;//Enum
-  //final Usuario usuario;
-  final String nomeUsuario;
-  final String dataDeAtualizacao;
-  final String dataDeCriacao;
-  final String email;
-  final String telefone;  
-
+  final num idUsuario;
 
   const Livros({
     this.id,
@@ -49,10 +39,6 @@ class Livros {
     @required this.idioma,
     @required this.isbn,
     @required this.status,    
-    @required this.nomeUsuario,
-    @required this.dataDeAtualizacao,
-    @required this.dataDeCriacao,
-    @required this.email,
-    this.telefone
+    @required this.idUsuario
   });
 }

@@ -18,16 +18,14 @@ class LivrosForm extends StatelessWidget {
       _formData['titulo'] = livro.titulo;
       _formData['autor'] = livro.autor;
       _formData['status']= livro.status;
-      _formData['nomeUsuario'] = livro.nomeUsuario;
-      _formData['email']= livro.email;
-      _formData['telefone'] = livro.telefone;
+      _formData['nomeUsuario'] = livro.idUsuario.toString();
     }    
   }
 
   @override
   Widget build(BuildContext context) {
     final Livros livro = ModalRoute.of(context).settings.arguments;
-
+    List<String> _status = ['DISPONIVEL','INDISPONIVEL'];
     _loadFormData(livro);
 
     return MaterialApp(
@@ -53,9 +51,7 @@ class LivrosForm extends StatelessWidget {
                     titulo: _formData['titulo'],
                     autor: _formData['autor'],
                     status: _formData['status'],
-                    nomeUsuario: _formData['nomeUsuario'],
-                    email: _formData['email'],
-                    telefone: _formData['telefone'],
+                    idUsuario: int.parse(_formData['idUsuario']),
                 ));  
                 
                 Navigator.of(context).pop();
@@ -114,20 +110,10 @@ class LivrosForm extends StatelessWidget {
                   onSaved: (value) => _formData['status'] = value,
                 ),
                 TextFormField(
-                  initialValue: _formData['nomeUsuario'],
-                  decoration: InputDecoration(labelText: 'Nome do Usuário'),
-                  onSaved: (value) => _formData['nomeUsuario'] = value,
-                ),
-                TextFormField(
-                  initialValue: _formData['email'],
-                  decoration: InputDecoration(labelText: 'email'),
-                  onSaved: (value) => _formData['email'] = value,
-                ),
-                TextFormField(
-                  initialValue: _formData['telefone'],
-                  decoration: InputDecoration(labelText: 'telefone'),
-                  onSaved: (value) => _formData['telefone'] = value,
-                ),
+                  initialValue: _formData['idUsuario'],
+                  decoration: InputDecoration(labelText: 'Id do Usuário'),
+                  onSaved: (value) => _formData['idUsuario'] = value,
+                )
               ],
             ),
           ),

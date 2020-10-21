@@ -13,11 +13,7 @@ const DUMMY_LIVROS = {
     idioma: 'Português',
     isbn: '8564296012',
     status: 'disponível',    
-    nomeUsuario: 'josé',
-    dataDeAtualizacao: '10/10/2020',
-    dataDeCriacao: '01/01/2020',
-    email: 'jose@jose.com.br',
-    telefone: ''
+    idUsuario: 1,
   ),
   '2': const Livros(
     id: '2',
@@ -31,11 +27,7 @@ const DUMMY_LIVROS = {
     idioma: 'Português',
     isbn: ' 8534705259',
     status: 'disponível',    
-    nomeUsuario: 'maria',
-    dataDeAtualizacao: '10/10/2020',
-    dataDeCriacao: '01/01/2020',
-    email: 'maria@maria.com.br',
-    telefone: ''
+    idUsuario: 2
   ),
   '3': const Livros(
     id: '3',
@@ -49,10 +41,6 @@ const DUMMY_LIVROS = {
     idioma: 'Inglês',
     isbn: ' 8534705259',
     status: 'Disponível',    
-    nomeUsuario: 'marta',
-    dataDeAtualizacao: '10/10/2020',
-    dataDeCriacao: '01/01/2020',
-    email: 'marta@marta.com.br',
-    telefone: ''
+    idUsuario: 2
   ),
 };

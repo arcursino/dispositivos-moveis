@@ -41,11 +41,7 @@ class Livro with ChangeNotifier {
             idioma: livro.idioma,
             isbn: livro.isbn,
             status: livro.status,
-            nomeUsuario: livro.nomeUsuario,
-            dataDeAtualizacao: livro.dataDeAtualizacao,
-            dataDeCriacao: livro.dataDeCriacao,
-            email: livro.email,
-            telefone: livro.telefone,        
+            idUsuario: livro.idUsuario,
           ),
       );
     } else {
@@ -64,11 +60,7 @@ class Livro with ChangeNotifier {
         idioma: livro.idioma,
         isbn: livro.isbn,
         status: livro.status,
-        nomeUsuario: livro.nomeUsuario,
-        dataDeAtualizacao: livro.dataDeAtualizacao,
-        dataDeCriacao: livro.dataDeCriacao,
-        email: livro.email,
-        telefone: livro.telefone, 
+        idUsuario: livro.idUsuario
       ),
     );
     }
